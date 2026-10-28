@@ -35,7 +35,7 @@ public class Calculadora {
             System.out.println("Resultado: " + resultado);
 
         } catch (NumberFormatException e) {
-            System.out.println("Error: La entrada debe ser un numero entero válido.");
+            System.out.println("Error: La entrada debe ser un numero entero valido.");
         } catch (OperacionInvalidaException e) {
             System.out.println("Error: " + e.getMessage());
         } catch (ArithmeticException e) {
