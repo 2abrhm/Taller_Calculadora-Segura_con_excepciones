@@ -5,10 +5,10 @@ public class Calculadora {
         Scanner scanner = new Scanner(System.in);
 
         try {
-            System.out.print("Ingrese el primer número entero: ");
+            System.out.print("Ingrese el primer numero entero: ");
             int num1 = Integer.parseInt(scanner.nextLine());
 
-            System.out.print("Ingrese el segundo número entero: ");
+            System.out.print("Ingrese el segundo numero entero: ");
             int num2 = Integer.parseInt(scanner.nextLine());
 
             System.out.print("Ingrese el operador (+, -, *, /): ");
@@ -35,7 +35,7 @@ public class Calculadora {
             System.out.println("Resultado: " + resultado);
 
         } catch (NumberFormatException e) {
-            System.out.println("Error: La entrada debe ser un número entero válido.");
+            System.out.println("Error: La entrada debe ser un numero entero válido.");
         } catch (OperacionInvalidaException e) {
             System.out.println("Error: " + e.getMessage());
         } catch (ArithmeticException e) {

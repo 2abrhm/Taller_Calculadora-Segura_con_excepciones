@@ -2,7 +2,7 @@ public class OperacionInvalidaException extends Exception {
     private final String operacion;
 
     public OperacionInvalidaException(String operacion) {
-        super("Operación no válida: '" + operacion + "'. Use +, -, * o /");
+        super("Operacion no valida: '" + operacion + "'. Use +, -, * o /");
         this.operacion = operacion;
     }
 
