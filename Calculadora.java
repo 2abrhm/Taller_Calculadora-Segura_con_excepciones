@@ -12,10 +12,10 @@ public class Calculadora {
             int num2 = Integer.parseInt(scanner.nextLine());
 
             System.out.print("Ingrese el operador (+, -, *, /): ");
-            String operador = scanner.nextLine();
+            String operacion = scanner.nextLine();
 
             int resultado;
-            switch (operador) {
+            switch (operacion) {
                 case "+":
                     resultado = num1 + num2;
                     break;
@@ -29,17 +29,17 @@ public class Calculadora {
                     resultado = num1 / num2;
                     break;
                 default:
-                    throw new OperacionInvalidaException("Operador inválido. Use únicamente +, -, * o /.");
+                    throw new OperacionInvalidaException(operacion);
             }
 
             System.out.println("Resultado: " + resultado);
 
         } catch (NumberFormatException e) {
-            System.out.println("Error: Entrada inválida. Debe ingresar números enteros válidos.");
-        } catch (ArithmeticException e) {
-            System.out.println("Error: No es posible dividir entre cero.");
+            System.out.println("Error: La entrada debe ser un número entero válido.");
         } catch (OperacionInvalidaException e) {
             System.out.println("Error: " + e.getMessage());
+        } catch (ArithmeticException e) {
+            System.out.println("Error: No se puede dividir entre cero.");
         } finally {
             scanner.close();
         }
